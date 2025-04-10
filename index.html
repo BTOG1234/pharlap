@@ -11,7 +11,6 @@
       background-size: 300px;
       font-family: 'Impact', 'Arial Black', sans-serif;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100vh;
@@ -19,51 +18,29 @@
     }
 
     h1 {
-      font-size: 3rem;
+      font-size: 5rem;
       color: transparent;
       background-image: linear-gradient(to top, red, orange, yellow);
       background-clip: text;
       -webkit-background-clip: text;
       text-shadow: 0 0 10px #ff0000, 0 0 20px #ff6600, 0 0 30px #ffff00;
       animation: flicker 1s infinite alternate;
-      margin-bottom: 20px;
     }
 
     @keyframes flicker {
       from { text-shadow: 0 0 5px #ff0000, 0 0 10px #ff6600; }
       to   { text-shadow: 0 0 20px #ff3300, 0 0 40px #ffff00; }
     }
-
-    button {
-      font-size: 1.2rem;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 10px;
-      background-color: orange;
-      color: white;
-      box-shadow: 0 0 10px red;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: red;
-    }
   </style>
 </head>
 <body>
   <h1>PHAR LAP TAXIDERMY</h1>
 
-  <button onclick="playMusic()">Play Music</button>
-
-  <audio id="bgMusic" loop>
+  <!-- Local music player -->
+  <audio autoplay loop>
     <source src="casino-night.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
-
-  <script>
-    function playMusic() {
-      document.getElementById('bgMusic').play();
-    }
-  </script>
 </body>
 </html>
+
